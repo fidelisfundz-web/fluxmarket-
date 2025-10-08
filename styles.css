@@ -1,0 +1,62 @@
+:root{
+  --bg:#f7f8fb;
+  --primary:#0b57d0;
+  --dark:#0b2136;
+  --muted:#6b7280;
+  --container:1100px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--dark);line-height:1.45}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(10,10,10,.04);position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.logo{font-weight:700;text-transform:lowercase}
+.nav{display:flex;gap:0.6rem;align-items:center}
+.nav a{color:var(--dark);text-decoration:none;padding:0.45rem 0.6rem;border-radius:6px}
+.nav .btn{background:var(--primary);color:#fff;padding:0.5rem 0.9rem;text-decoration:none}
+.nav .btn.ghost{background:transparent;border:1px solid rgba(11,87,208,.12);color:var(--primary)}
+
+.nav-toggle{display:none;background:none;border:0;font-size:1.2rem}
+
+/* Hero */
+.hero{padding:3rem 0}
+.hero-inner{display:flex;gap:2rem;align-items:center;justify-content:space-between}
+.hero-text{max-width:52%}
+.hero-text h1{font-size:2.1rem;margin:0 0 .5rem}
+.hero-text p{color:var(--muted);margin:0 0 1rem}
+.placeholder{width:320px;height:220px;background:linear-gradient(135deg,#e9eefc,#f6f9ff);display:flex;align-items:center;justify-content:center;border-radius:8px;color:#8aa0e6}
+
+/* Steps */
+.how-it-works{padding:2rem 0;background:#fff;margin-top:1rem}
+.steps{display:flex;gap:1rem;flex-wrap:wrap}
+.step{flex:1 1 220px;background:transparent;padding:1rem;border-radius:8px}
+.step-number{font-weight:700;color:var(--primary);margin-bottom:.5rem}
+
+/* Services */
+.services{padding:2rem 0}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.service{background:#fff;padding:1rem;border-radius:8px}
+
+/* Team */
+.team{padding:2rem 0;background:#fff;margin-top:1rem}
+.team-grid{display:flex;gap:1rem;flex-wrap:wrap}
+.team-member{flex:1 1 180px;background:transparent;padding:0.6rem;text-align:center}
+.avatar{height:80px;width:80px;border-radius:8px;background:#eef2ff;margin:0 auto 0.6rem;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* FAQ / Contact */
+.faq-contact{padding:2rem 0}
+.split{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap}
+
+/* Footer */
+.site-footer{padding:1rem 0;background:#0b1220;color:#fff;margin-top:1.5rem}
+.site-footer p{margin:0}
+
+@media (max-width:900px){
+  .hero-inner{flex-direction:column;align-items:flex-start}
+  .hero-text{max-width:100%}
+  .nav{display:none}
+  .nav-toggle{display:block}
+}
